@@ -55,32 +55,32 @@
                     <div class="row">
                         <div class="form-group col-sm-4 mb-2">
                             <h6 class="card-subtitle mb-2 text-muted">DNI</h6>
-                            <input type="text" class="form-control" placeholder="" disabled>
-                          </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-sm-6 mb-2">
-                          <h6 class="card-subtitle mb-2 text-muted">Nombre</h6>
-                          <input type="text" class="form-control" placeholder="" disabled>
+                          <input type="text" class="form-control"  [(ngModel)]="dni" placeholder="" disabled>
                         </div>
-                        <div class="form-group col-sm-6 mb-2">
-                          <h6 class="card-subtitle mb-2 text-muted">Apellido</h6>
-                          <input type="text" class="form-control" placeholder="" disabled>
+                  </div>
+                  <div class="row">
+                      <div class="form-group col-sm-6 mb-2">
+                        <h6 class="card-subtitle mb-2 text-muted">Nombre</h6>
+                        <input type="text" class="form-control" [(ngModel)]="nombre" placeholder="" disabled>
+                      </div>
+                      <div class="form-group col-sm-6 mb-2">
+                        <h6 class="card-subtitle mb-2 text-muted">Apellido</h6>
+                        <input type="text" class="form-control" [(ngModel)]="apellido" placeholder="" disabled>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="form-group col-sm-4 mb-2">
+                          <h6 class="card-subtitle mb-2 text-muted">Historia clínica</h6>
+                          <input type="text" class="form-control" [(ngModel)]="historiaclinica" placeholder="" disabled>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="form-group col-sm-4 mb-2">
-                            <h6 class="card-subtitle mb-2 text-muted">Historia clínica</h6>
-                            <input type="text" class="form-control" placeholder="" disabled>
-                          </div>
-                          <div class="form-group col-sm-4 mb-2">
-                            <h6 class="card-subtitle mb-2 text-muted">Fecha</h6>
-                            <input type="text" class="form-control" placeholder="" disabled>
-                          </div>
-                          <div class="form-group col-sm-4 mb-2">
-                              <h6 class="card-subtitle mb-2 text-muted">Edad</h6>
-                              <input type="text" class="form-control" placeholder="" disabled>
-                          </div>
+                          <h6 class="card-subtitle mb-2 text-muted">Fecha</h6>
+                          <input type="text" class="form-control" [(ngModel)]="fecha" placeholder="" disabled>
+                        </div>
+                        <div class="form-group col-sm-4 mb-2">
+                            <h6 class="card-subtitle mb-2 text-muted">Edad</h6>
+                            <input type="text" class="form-control" [(ngModel)]="edad" placeholder="" disabled>
+                        </div>
                     </div>
                     <h6 class="card-subtitle mb-2 text-muted">Seleccione la dolencia del paciente</h6>
                     <div class="row">
@@ -252,34 +252,41 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td><input type="text"  placeholder="" class="form-control"></td>
-                            <td><input type="text"  placeholder="" class="form-control"></td>
-                            <td><input type="text"  placeholder="" class="form-control"></td>
-                            <td><input type="text"  placeholder="" class="form-control"></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td><input type="text"  placeholder="" class="form-control"></td>
-                            <td><input type="text"  placeholder="" class="form-control"></td>
-                            <td><input type="text"  placeholder="" class="form-control"></td>
-                            <td><input type="text"  placeholder="" class="form-control"></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td><input type="text"  placeholder="" class="form-control"></td>
-                            <td><input type="text"  placeholder="" class="form-control"></td>
-                            <td><input type="text"  placeholder="" class="form-control"></td>
-                            <td><input type="text"  placeholder="" class="form-control"></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td><input [(ngModel)]="medicamento1" type="text" placeholder="" class="form-control"></td>
+                    <td><input [(ngModel)]="cantidad1" type="text" placeholder="" class="form-control"></td>
+                    <td><input [(ngModel)]="frecuencia1" type="text" placeholder="" class="form-control"></td>
+                    <td><input [(ngModel)]="dias1" type="text" placeholder="" class="form-control"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td><input type="text" [(ngModel)]="medicamento2" placeholder="" class="form-control"></td>
+                    <td><input type="text" [(ngModel)]="cantidad2" placeholder="" class="form-control"></td>
+                    <td><input type="text" [(ngModel)]="frecuencia2" placeholder="" class="form-control"></td>
+                    <td><input type="text" [(ngModel)]="dias2" placeholder="" class="form-control"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td><input type="text" [(ngModel)]="medicamento3" placeholder="" class="form-control"></td>
+                    <td><input type="text" [(ngModel)]="cantidad3" placeholder="" class="form-control"></td>
+                    <td><input type="text" [(ngModel)]="frecuencia3" placeholder="" class="form-control"></td>
+                    <td><input type="text" [(ngModel)]="dias3" placeholder="" class="form-control"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
+      </div>
     </div>
-</div>
+    <br>
+    <div class="row">
+      <div class="form-group col-sm-3 mb-2">
+      </div>
+      <button type="button" class="btn btn-primary" (click)="Generar_receta()" style="margin: 1rem;">Generar
+        receta</button>
+    </div>
 <div class="row">
   <div class="form-group col-sm-3 mb-2">
   </div>
